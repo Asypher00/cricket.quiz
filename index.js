@@ -2,6 +2,7 @@ var readlineSync = require('readline-sync');
 var userName = readlineSync.question('What is your name? ');
 console.log("Welcome To Its All About Cricket  " + userName);
 console.log("Lets see how much do you know about the game of cricket")
+console.log("To give the answer type in the correct option ")
 var score = 0;
 
 var high_scores = {
@@ -51,8 +52,13 @@ for(var i = 0 ; i < question_array.length ; i++)
 questions(current_question.question, current_question.answer);}
 
 if(score >= high_scores.high_score)
-{console.log("You are the new high scorer");}
-else{console.log("high score is " + high_scores.high_score);}
+{console.log("You are the new high scorer");
+high_scores.name = userName;
+high_scores.high_score = score;
+console.log(" The new high score is " + score + " by " + userName);}
+else{console.log("The High score is scored by " + high_scores.name + " and the high score is " + high_scores.high_score);
+
+}
 
 
   

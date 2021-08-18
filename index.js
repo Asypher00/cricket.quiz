@@ -46,7 +46,12 @@ var question_four = {
   answer : "b",
 };
 
-var question_array = [question_one, question_two, question_three, question_four];
+var question_five = {
+  question : "Who has the highest number of test runs? a.Shane Warne b. Sachin Tendulkar c. Wasim Akram d. Anil Kumble ",
+  answer : "b",
+};
+
+var question_array = [question_one, question_two, question_three, question_four, question_five];
 for(var i = 0 ; i < question_array.length ; i++)
 { var current_question = question_array[i];
 questions(current_question.question, current_question.answer);}
